@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  generate: {
+    dir: "../page2"
+  },
   head: {
     title: 'src',
     meta: [
