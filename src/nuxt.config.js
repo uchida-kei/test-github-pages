@@ -5,6 +5,9 @@ module.exports = {
   generate: {
     dir: "../page2"
   },
+  module: [
+    '@nuxtjs/axios'
+  ],
   head: {
     title: 'src',
     meta: [
