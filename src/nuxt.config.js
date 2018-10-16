@@ -8,6 +8,13 @@ module.exports = {
   module: [
     '@nuxtjs/axios'
   ],
+  plugin: [
+    '~/plugins/axios',
+    '~/plugins/element-ui'
+  ],
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
   head: {
     title: 'src',
     meta: [
@@ -30,6 +37,8 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['element-ui'],
+
     extend (config, { isDev }) {
       if (isDev && process.client) {
         config.module.rules.push({
