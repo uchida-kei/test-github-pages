@@ -8,8 +8,8 @@ module.exports = {
   module: [
     '@nuxtjs/axios'
   ],
-  plugin: [
-    '~/plugins/axios',
+  plugins: [
+    //'~/plugins/axios',
     '~/plugins/element-ui'
   ],
   css: [

@@ -1,24 +1,24 @@
 <template>
   <section class="container">
-    <div id="app">
+    <!--<div id="app">-->
       <el-row v-for="(o, index) in 2">
-        <el-col :span="20" v-for="(i) in 1" :key="i">
-          <div style="padding: 14px;">
-            <el-card :body-style="{ padding: '0px' }">
-              <el-collapse v-model="activeNames">
-                <img src="https://i.gyazo.com/37b437093f5d47027c4d57b7994d0374.png" class="image">
-                <el-collapse-item>
-                  <div class="txt">
-                    asasas
-                    <!--{{test[index]}}-->
-                  </div>
-                </el-collapse-item>
-              </el-collapse>
-            </el-card>
+        <el-col v-for="(i) in 1" :key="i">
+          <div style="padding: 0px;">
+            <el-card class = "boxcard">
+              <img src="https://nekogazou.com/wp-content/uploads/2015/03/gazou12-e1426694824704.jpg" class="image"/>
+            </el-card>                        
+            <el-collapse v-model="activeNames">
+              <el-collapse-item>
+                <p class="txt">
+                  hogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
+                  <!--{{test[index]}}-->
+                </p>
+              </el-collapse-item>
+            </el-collapse>
           </div>
         </el-col>
       </el-row>
-    </div>
+    <!--</div>-->
   </section>
 </template>
 
@@ -63,13 +63,21 @@ export default {
 }
 
 .image {
-    width: 30%;
     display: block;
   }
   
 .txt {
     font-size: 20px;
     color: #999;
-  }
+}
+.app {
+      Width: 100%;
+      display: flex;
+
+}
+.boxcard {
+  width: 100%;
+  padding: 0px;
+}
 </style>
 
