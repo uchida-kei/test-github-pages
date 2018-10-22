@@ -10,7 +10,7 @@ module.exports = {
   ],
   plugins: [
     //'~/plugins/axios',
-    '~/plugins/element-ui'
+    //'~/plugins/element-ui'
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css'
