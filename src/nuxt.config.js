@@ -3,14 +3,14 @@ module.exports = {
   ** Headers of the page
   */
   generate: {
-    dir: "../page2"
+    dir: "../page"
   },
   module: [
     '@nuxtjs/axios'
   ],
   plugins: [
     //'~/plugins/axios',
-    //'~/plugins/element-ui'
+    '~/plugins/element-ui'
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css'
