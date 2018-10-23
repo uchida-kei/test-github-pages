@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   generate: {
-    dir: "../page"
+    dir: "../pages"
   },
   module: [
     '@nuxtjs/axios'
