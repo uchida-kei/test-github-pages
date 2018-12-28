@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row type="flex" v-for="o in 3" :key="o">
+    <el-row type="flex" v-for="o in 10" :key="o">
         <ContentCard />
         <br>
     </el-row>
