@@ -1,12 +1,12 @@
 <template>
-  <div id="card" class="container">
+  <div class="container">
     <div v-on:click="openCard">
     <el-card>
       <img src="https://nekogazou.com/wp-content/uploads/2015/03/gazou12-e1426694824704.jpg" class="image"/>
     </el-card>
     </div>
     <el-collapse>
-      <el-collapse-item title="hoge" class="title" id="bar">
+      <el-collapse-item title="hoge" class="title">
         <div class="text">hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge</div>
       </el-collapse-item>
     </el-collapse>
@@ -15,10 +15,6 @@
 
 <script>
 export default {
-  //asyncData ({app}) {
-  //  return {
-  //  }
-  //},
   methods: {
     openCard() {
       this.$children[1].$children[0].$el.childNodes[0].childNodes[0].click()
