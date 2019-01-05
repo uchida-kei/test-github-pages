@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row type="flex" v-for="o in 10" :key="o">
-        <ContentCard />
+        <ContentCard :num="o" />
         <br>
     </el-row>
     <el-row>
@@ -29,8 +29,8 @@ export default {
         return list
     }
     */
-    return {
-    }
+
+    return 
   },
   components: {
     ContentCard
@@ -39,15 +39,9 @@ export default {
 </script>
 
 <style>
-.container {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto; 
-  width: 80%;
-}
 .el-row {
-  margin-bottom: 5vw;
+  margin-top: 6.5vw;
+  margin-bottom: 6.5vw;
 }
 .return-top {
   position: fixed;
