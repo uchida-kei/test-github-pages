@@ -75,7 +75,6 @@ export default {
 }
 .text {
   width: 100%;
-  height: 13.2vh;
   font-size: 1.5vw;
   color: #999;
   text-align: left;

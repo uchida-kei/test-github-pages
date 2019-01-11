@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-row type="flex" v-for="o in 10" :key="o">
+    <el-row type="flex" v-for="o in json.content.num" :key="o">
         <ContentCard :num="o" />
         <br>
     </el-row>
@@ -29,8 +29,10 @@ export default {
         return list
     }
     */
+    const json = require("../assets/data.json");
+    console.log(json.content.num);
 
-    return 
+    return {json}
   },
   components: {
     ContentCard
