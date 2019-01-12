@@ -6,7 +6,7 @@
       <!--<img src="https://nekogazou.com/wp-content/uploads/2015/03/gazou12-e1426694824704.jpg" class="image"/>
       --><img src="~/static/img/01_test1.png" class="image"/>
       </div>
-      <div class="title">{{num}}hogehogehogehogehogehogehoge</div>
+      <div class="title">{{data.content.title[num]}}</div>
       <div class="text">hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
        hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge 
       </div>
@@ -28,11 +28,13 @@
 export default {
   methods: {
     openCard() {
-      this.$children[1].$children[0].$el.childNodes[0].childNodes[0].click()
+      console.log(this.data.content.title[this.num]);
+      //this.$children[1].$children[0].$el.childNodes[0].childNodes[0].click()
     }
   },
   props: {
-    num: Number
+    num: Number,
+    data: Object
   }
 }
 </script>
