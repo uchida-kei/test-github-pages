@@ -4,12 +4,14 @@
     <el-card>
       <div class="image-background">
       <!--<img src="https://nekogazou.com/wp-content/uploads/2015/03/gazou12-e1426694824704.jpg" class="image"/>
-      --><img src="~/static/img/01_test1.png" class="image"/>
+      -->
+        <img :src="imageUrl" class="image"/>
       </div>
       <div class="title">{{data.content.title[num]}}</div>
       <div class="text">hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
        hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge 
       </div>
+
     </el-card>
     </div>
     <!--
@@ -35,6 +37,14 @@ export default {
   props: {
     num: Number,
     data: Object
+  },
+  computed: {
+    imageUrl : function () {
+      return "~/static/image/"+this.data.content.image.name[this.num];
+    },
+    textUrl : function () {
+      return "~/_nuxt/static/text/"+this.data.content.text.name[this.num];
+    }
   }
 }
 </script>

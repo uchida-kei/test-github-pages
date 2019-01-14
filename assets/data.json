@@ -2,11 +2,11 @@
     "content":{
         "num":2,
         "title":["test1", "test2"],
-        "img":{
-            "name":["01_test1", "02_test2"]
+        "image":{
+            "name":["01_test1.png", "02_test2.png"]
         },
-        "txt":{
-            "name":["01_test1", "02_test2"]
+        "text":{
+            "name":["01_test1.txt", "02_test2.txt"]
         }
     }
 }
