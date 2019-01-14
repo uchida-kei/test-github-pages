@@ -40,10 +40,10 @@ export default {
   },
   computed: {
     imageUrl : function () {
-      return "~/static/image/"+this.data.content.image.name[this.num];
+      return "image/"+this.data.content.image.name[this.num];
     },
     textUrl : function () {
-      return "~/_nuxt/static/text/"+this.data.content.text.name[this.num];
+      return "/text/"+this.data.content.text.name[this.num];
     }
   }
 }
