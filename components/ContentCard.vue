@@ -3,26 +3,12 @@
     <div v-on:click="openCard">
     <el-card>
       <div class="image-background">
-      <!--<img src="https://nekogazou.com/wp-content/uploads/2015/03/gazou12-e1426694824704.jpg" class="image"/>
-      -->
         <img :src="imageUrl" class="image"/>
       </div>
-      <div class="title">{{data.content.title[num]}}</div>
-      <div class="text">hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge
-       hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge 
-      </div>
-
+      <div class="title">{{title}}</div>
+      <div class="text">{{text}}</div>
     </el-card>
     </div>
-    <!--
-    <el-collapse>
-      <el-collapse-item title="hoge" class="title">
-        <div class="text" v-on:click="openCard">hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge</div>
-             <div class="text" type="text/html" data="/01_test1.txt">
-        </div>
-      </el-collapse-item>
-    </el-collapse>
-    -->
   </div>
 </template>
 
@@ -30,7 +16,7 @@
 export default {
   methods: {
     openCard() {
-      console.log(this.data.content.title[this.num]);
+      console.log(this.data.card.title[this.num]);
       //this.$children[1].$children[0].$el.childNodes[0].childNodes[0].click()
     }
   },
@@ -40,10 +26,16 @@ export default {
   },
   computed: {
     imageUrl : function () {
-      return "image/"+this.data.content.image.name[this.num];
+      return "image/"+this.data.card.image.name[this.num];
     },
     textUrl : function () {
-      return "/text/"+this.data.content.text.name[this.num];
+      return "text/"+this.data.card.text.name[this.num];
+    },
+    title : function () {
+      return this.data.card.title[this.num];
+    },
+    text : function () {
+      return this.data.card.text.contents[this.num];
     }
   }
 }

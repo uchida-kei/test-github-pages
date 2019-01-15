@@ -1,12 +1,16 @@
 {
-    "content":{
+    "card":{
         "num":2,
         "title":["test1", "test2"],
         "image":{
             "name":["01_test1.png", "02_test2.png"]
         },
         "text":{
-            "name":["01_test1.txt", "02_test2.txt"]
+            "name":["01_test1.txt", "02_test2.txt"],
+            "contents":[
+                "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge", 
+                "piyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyo"
+            ]
         }
     }
 }

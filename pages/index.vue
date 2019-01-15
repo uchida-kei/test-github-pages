@@ -1,49 +1,27 @@
 <template>
   <div>
-    <el-row type="flex" v-for="o in json.content.num" :key="o">
-        <ContentCard :num="o-1" :data="json"/>
-        <br>
-    </el-row>
-    <el-row>
-      <a href="#">
-        <el-button class="return-top" icon="el-icon-arrow-up" circle></el-button>
-      </a>
-    </el-row>
+    <CardList :data="json"/>
+    <TopButton/>
   </div>
 </template>
 
 <script>
-import ContentCard from '~/components/ContentCard.vue'
+import CardList from '~/containers/CardList.vue'
+import TopButton from '~/basics/TopButton.vue'
+
 export default {
   asyncData ({app}) {
-    /*
-    const trees = await app.$axios.$get(`https://api.github.com/repos/uchida-kei/test-github-pages/git/trees/master`)
-    const tree = await app.$axios.$get(`https://api.github.com/repos/uchida-kei/test-github-pages/git/trees/${trees.tree[1].sha}`)
-    const len = tree.length()
-    const name = (tree, len) => {
-        const reg = /(.*)(?:\.([^.]+$))/
-        let list = []
-        for(const i = 0; i <= len; i++){
-            list[i] = tree.tree[i].path.match(reg)[1]
-        }
-        return list
-    }
-    */
     const json = require("~/assets/data.json");
-
     return {json}
   },
   components: {
-    ContentCard
+    CardList,
+    TopButton
   }
 }
 </script>
 
 <style>
-.el-row {
-  margin-top: 6.5vw;
-  margin-bottom: 6.5vw;
-}
 .return-top {
   position: fixed;
   bottom: 5vw;
@@ -53,5 +31,4 @@ export default {
 .el-button.is-circle {
     padding: 2vw;
 }
-
 </style>
