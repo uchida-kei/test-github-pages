@@ -9,14 +9,28 @@
       <div class="text">{{text}}</div>
     </el-card>
     </div>
+    <DialogCard :imageUrl="imageUrl" 
+                :title="title"
+                :text="text"
+                :value="val"/>
   </div>
 </template>
 
 <script>
+import DialogCard from '~/components/DialogCard.vue'
+
 export default {
+  data() {
+    return {
+      val:{
+      dialogVisible: false
+      }
+    };
+  },
   methods: {
     openCard() {
       console.log(this.data.card.title[this.num]);
+      this.val.dialogVisible= true;
       //this.$children[1].$children[0].$el.childNodes[0].childNodes[0].click()
     }
   },
@@ -37,6 +51,9 @@ export default {
     text : function () {
       return this.data.card.text.contents[this.num];
     }
+  },
+  components: {
+    DialogCard
   }
 }
 </script>
